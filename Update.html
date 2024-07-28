@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP8266 Server Update</title>
+  <style>
+    html{
+      font-family:'Segoe UI', tahoma, Geneva, Verdana, sans-serif;
+      background: #000000;
+      background: linear-gradient(to right, #5b5757, #000000);
+      display: inline-block;
+      text-align: center;
+    }
+
+    body{
+      margin: 0 auto;
+      max-width: 400px;
+      padding-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    input{
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .contenedor{
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
+      z-index: 5;
+    }
+
+    .espacio_contenedor{
+      position: relative;
+      margin-top: 20px;
+      min-width: 300px;
+      max-width: 600px;
+    }
+
+    .browser{
+      padding: 15px;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    
+    .updater{
+      color: rgb(0, 0, 0);
+      margin-top: -4px;
+    }
+
+    .textbox{
+      margin-top: -5px;
+    }
+
+    #btn{
+      background: white;
+      border: 0px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      font-weight: 600;
+      width: 100%;
+      height: 100%;
+      border-radius: 75px;
+    }
+
+    #btn2{
+      background: white;
+      border: 0px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
+      letter-spacing: 1px;      
+      font-weight: 500;
+    }
+
+    .btn2{
+      margin-top: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 20px auto;
+      width: 200px;
+      height: 50px;
+      background: white;
+      border-radius: 75px;
+      transition: 1s box-shadow;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn2:hover{
+      box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+    }
+
+    .btn2:hover::before, .btn2:hover::after{
+      display: block;
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 50px;
+      background: #FDA8CF;
+      border-radius: 75px;
+      z-index: -1;
+      animation: 1s clockwise infinite;
+    }
+
+    .btn2:hover:after{
+      background: #F3CE5E;
+      animation: 2s counterclockwise infinite;
+    }
+
+    .btn{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 20px auto;
+      width: 250px;
+      height: 100px;
+      background: white;
+      border-radius: 75px;      
+      transition: 1s box-shadow;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+        
+    .btn:hover{
+      box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+    }
+
+    .btn:hover::before, .btn:hover::after{
+      display: block;
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 100px;
+      background: #FDA8CF;
+      border-radius: 75px;
+      z-index: -1;
+      animation: 1s clockwise infinite;
+    }
+
+    .btn:hover:after{
+      background: #F3CE5E;
+      animation: 2s counterclockwise infinite;
+    }
+
+    @keyframes clockwise {
+      0% {
+        top: -5px;
+        left: 0;
+      }
+      12% {
+        top: -2px;
+        left: 2px;
+      }
+      25% {
+        top: 0;
+        left: 5px;    
+      }
+      37% {
+        top: 2px;
+        left: 2px;
+      }
+      50% {
+        top: 5px;
+        left: 0;    
+      }
+      62% {
+        top: 2px;
+        left: -2px;
+      }
+      75% {
+        top: 0;
+        left: -5px;
+      }
+      87% {
+        top: -2px;
+        left: -2px;
+      }
+      100% {
+        top: -5px;
+        left: 0;    
+      }
+    }
+
+    @keyframes counterclockwise {
+      0% {
+        top: -5px;
+        right: 0;
+      }
+      12% {
+        top: -2px;
+        right: 2px;
+      }
+      25% {
+        top: 0;
+        right: 5px;    
+      }
+      37% {
+        top: 2px;
+        right: 2px;
+      }
+      50% {
+        top: 5px;
+        right: 0;    
+      }
+      62% {
+        top: 2px;
+        right: -2px;
+      }
+      75% {
+        top: 0;
+        right: -5px;
+      }
+      87% {
+        top: -2px;
+        right: -2px;
+      }
+      100% {
+        top: -5px;
+        right: 0;    
+      }
+    }
+
+    .interno .btn3{
+      position: relative;
+      top: -33em;
+      background-color: transparent;
+      --c: #F3CE5E;
+      color: var(--c);
+      font-size: 15px;
+      border: 0.3em solid var(--c);
+      border-radius: 1.9em;
+      width: 9em;
+      height: 3em;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: sans-serif;
+      letter-spacing: 0.1em;
+      text-align: center;
+      line-height: 1em;
+      overflow: hidden;
+      z-index: 1;
+      transition: 0.5s;
+      margin: -4.0em;
+    }
+
+    .interno .btn3 span{
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      background-color: var(--c);
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+      z-index: -1;
+    }
+
+    .interno .btn3:hover {
+      --c: #FDA8CF;
+      color: black;
+    }
+
+    .interno .btn3:hover span {
+      transform: translateY(0) scale(2);
+    }
+
+    .interno .btn3 span:nth-child(1) {
+      --n: 1;
+    }
+    .interno .btn3 span:nth-child(2) {
+      --n: 2;
+    }
+    .interno .btn3 span:nth-child(3) {
+      --n: 3;
+    }
+    .interno .btn3 span:nth-child(4) {
+      --n: 4;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="espacio_contenedor">
+      <div class="textbox"><input type="text" id="usuario" placeholder="Usuario"/></div>
+      <div class="textbox"><input type="password" id="password" placeholder="Contraseña"/></div>
+      <div class="btn2" id="btn2"><button id="btn2">Verificar</button></div>
+      
+      <form class="browser" method="POST" action="/actualizar" enctype="multipart/form-data">
+        <input type="file" name="update" /><br>
+          <div class="btn">
+            <input id="btn" class="updater" type="submit" value="Cargar" />
+          </div>
+      </form>  
+
+      <div class="interno">
+        <div>
+          <button class="btn3" onclick="Pagina1()">
+            ⮌
+            <span></span><span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <script>
+    const btn = document.getElementById("btn");
+    const btn2 = document.getElementById("btn2");
+    btn.setAttribute("disabled", "");
+    btn2.addEventListener("click", Verificar);
+    
+    function Verificar(){
+      
+      const usuario = document.getElementById("usuario");
+      const password = document.getElementById('password');
+      const usuarioV = "admin";
+      const passwordV = "admin";
+
+      if(usuario.value.localeCompare(usuarioV, 'en', {sensitivity: 'base'}) === 0  && password.value.localeCompare(passwordV, 'en', {sensitivity: 'base'}) === 0){
+        btn.disabled = false;
+        alert("Bienvenido master");
+      
+      }else{
+        btn.disabled = true;
+        alert("Usuario o contraseña incorrecto");
+      }
+    }
+
+    function Pagina1(){
+      window.location.href = "/";
+    }
+
+
+    function consultaGET(consulta){
+      const Http = new XMLHttpRequest();
+      console.log(`Consultando  ${consulta}`)
+      Http.open("GET", consulta);
+      Http.send();
+
+      Http.onreadystatechange = (e) =>{
+        console.log(Http.status);
+        console.log(Http.responseText);
+      };
+    }
+  </script>
+</body>
+</html>
