@@ -3,7 +3,7 @@
 //                                   FrontEnd
 //==================================================================================
 
-String Pagina =  R"====(<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>ESP8266 Server Checking</title><style>html{font-family:'Segoe UI',tahoma,Geneva,Verdana,sans-serif;background:#000;background:linear-gradient(to right,#5b5757,#000);display:inline-block;text-align:center}body{margin:0 auto;max-width:600px;padding-bottom:25px;display:flex;align-items:center;justify-content:center;height:100vh}h1{text-decoration:underline;font-size:2.7rem;color:#0a21ee;border-radius:8px;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.7) 1px,rgba(246,255,0,.5) 10px)}h4{font-family:Arial,sans-serif;font-size:20px;margin:0;padding:0;display:flex;align-items:center;justify-content:center;height:15vh;color:#000}.contenedor{background-color:#fff;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,1.5)}.espacio_contenedor{position:relative;margin-top:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:600px}#valor_distancia{margin-left:10px;margin-right:10px;height:33px;font-weight:700;color:#007bff}.rango{font-size:20px}.btn{position:relative;top:-36em;background-color:transparent;--c:#F3CE5E;color:var(--c);font-size:15px;border:.3em solid var(--c);border-radius:1.9em;width:9em;height:3em;text-transform:uppercase;font-weight:700;font-family:sans-serif;letter-spacing:.1em;text-align:center;line-height:1em;overflow:hidden;z-index:1;transition:.5s;margin:-4em;content:📤}.btn span{position:absolute;width:25%;height:100%;background-color:var(--c);transform:translateY(150%);border-radius:50%;left:calc((var(--n) - 1) * 25%);transition:.5s;transition-delay:calc((var(--n) - 1) * .1s);z-index:-1}.btn:hover{--c:#FDA8CF;color:#000}.btn::after{content:"📤";font-size:30px;transition:.5s}.btn:hover::after{font-size:medium;content:"Actualizar"}.btn:hover span{transform:translateY(0) scale(2)}.btn span:nth-child(1){--n:1}.btn span:nth-child(2){--n:2}.btn span:nth-child(3){--n:3}.btn span:nth-child(4){--n:4}</style><div class=contenedor><h1 class=titulo>Fisgon Parking Monitoring</h1><div class=espacio_contenedor><h4 class=display id=dist1>Parqueadero 1: <span class=display id=valor_distancia1>---</span> Cm</h4><output class=rango id=rango_valP1>40</output><br><input id=rangoP1 max=450 min=2 oninput="rango_valP1.value=value"type=range value=40><h4 class=display id=dist2>Parqueadero 2: <span class=display id=valor_distancia2>---</span> Cm</h4><output class=rango id=rango_valP2>40</output><br><input id=rangoP2 max=450 min=2 oninput="rango_valP2.value=value"type=range value=40><div><button class=btn onclick=Pagina2()><span></span><span></span><span></span><span></span></button></div></div></div><script>let ejecutar = false;
+String Pagina =  R"====(<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>ESP8266 Server Checking</title><style>html{font-family:'Segoe UI',tahoma,Geneva,Verdana,sans-serif;background:#000;background:linear-gradient(to right,#5b5757,#000);display:inline-block;text-align:center}body{margin:0 auto;max-width:600px;padding-bottom:25px;display:flex;align-items:center;justify-content:center;height:100vh}h1{text-decoration:underline;font-size:2.7rem;color:#0a21ee;border-radius:8px;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.7) 1px,rgba(246,255,0,.5) 10px)}h4{font-family:Arial,sans-serif;font-size:20px;margin:0;padding:0;display:flex;align-items:center;justify-content:center;height:15vh;color:#000}.contenedor{background-color:#fff;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,1.5)}.espacio_contenedor{position:relative;margin-top:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:600px}#valor_distancia{margin-left:10px;margin-right:10px;height:33px;font-weight:700;color:#007bff}.rango{font-size:20px}.btn{position:relative;top:-42.5em;background-color:transparent;--c:#F3CE5E;color:var(--c);font-size:15px;border:.3em solid var(--c);border-radius:1.9em;width:9em;height:3em;text-transform:uppercase;font-weight:700;font-family:sans-serif;letter-spacing:.1em;text-align:center;line-height:1em;overflow:hidden;z-index:1;transition:.5s;margin:-4em;content:📤}.btn span{position:absolute;width:25%;height:100%;background-color:var(--c);transform:translateY(150%);border-radius:50%;left:calc((var(--n) - 1) * 25%);transition:.5s;transition-delay:calc((var(--n) - 1) * .1s);z-index:-1}.btn:hover{--c:#FDA8CF;color:#000}.btn::after{content:"📤";font-size:30px;transition:.5s}.btn:hover::after{font-size:medium;content:"Actualizar"}.btn:hover span{transform:translateY(0) scale(2)}.btn span:nth-child(1){--n:1}.btn span:nth-child(2){--n:2}.btn span:nth-child(3){--n:3}.btn span:nth-child(4){--n:4}</style><div class=contenedor><h1 class=titulo>Fisgon Parking Monitoring</h1><div class=espacio_contenedor><h4 class=display id=dist1>Parqueadero 1: <span class=display id=valor_distancia1>---</span> Cm</h4><p id=estado_dist1>...</p><output class=rango id=rango_valP1>200</output><br><input id=rangoP1 max=450 min=2 oninput="rango_valP1.value=value"type=range value=200><h4 class=display id=dist2>Parqueadero 2: <span class=display id=valor_distancia2>---</span> Cm</h4><p id=estado_dist2>...</p><output class=rango id=rango_valP2>200</output><br><input id=rangoP2 max=450 min=2 oninput="rango_valP2.value=value"type=range value=200><div><button class=btn onclick=Pagina2()><span></span><span></span><span></span><span></span></button></div></div></div><script>let ejecutar = false;
         const tiempoAgotado = 5000;
         const dist1 = document.getElementById('valor_distancia1');
         const dist2 = document.getElementById('valor_distancia2');
@@ -30,6 +30,18 @@ String Pagina =  R"====(<!doctypehtml><html lang=en><meta charset=UTF-8><meta co
                         if(xhr.status === 200) {
                             console.log("Respuesta del servidor para distancia 1:", xhr.responseText);
                             dist1.innerText = xhr.responseText;
+                            const distancia = parseInt(xhr.responseText);
+                            const estadoDist1 = document.getElementById('estado_dist1');
+                            if(distancia <= 200){
+                                if (distancia >= 2){
+                                    estadoDist1.innerText = "Ocupado";
+                                }                                
+                            }else if(distancia > 200){
+                                estadoDist1.innerText = "Disponible";
+                            }else{
+                                estadoDist1.innerText = "...";
+                            }
+
                             resolve();
                         }else{
                             reject("Error al obtener distancia 1:", xhr.statusText);
@@ -58,6 +70,18 @@ String Pagina =  R"====(<!doctypehtml><html lang=en><meta charset=UTF-8><meta co
                         if(xhr.status === 200) {
                             console.log("Respuesta del servidor para distancia 2:", xhr.responseText);
                             dist2.innerText = xhr.responseText;
+                            const distancia = parseInt(xhr.responseText);
+                            const estadoDist2 = document.getElementById('estado_dist2');
+                            if(distancia <= 200){
+                                if (distancia >= 2){
+                                    estadoDist2.innerText = "Ocupado";
+                                }                                
+                            }else if(distancia > 200){
+                                estadoDist2.innerText = "Disponible";
+                            }else{
+                                estadoDist2.innerText = "...";
+                            }
+
                             resolve();
                         }else{
                             reject("Error al obtener distancia 2:", xhr.statusText);

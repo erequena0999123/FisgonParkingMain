@@ -28,9 +28,7 @@ void setup() {
   server.begin();
   Serial.println("Servidor HTTP iniciado");
   Udp_receiving.begin(ServerPort);
-  Udp_receiving.begin(ServerPort2);
-  Udp_sending.begin(ClientPort1);
-  Udp_sending.begin(ClientPort2);
+  Udp_sending.begin(ClientPort);
 
   receiving.attach_ms(1910, LectorUDP);  
 

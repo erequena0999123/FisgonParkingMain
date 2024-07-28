@@ -77,7 +77,7 @@
 
         .btn{
             position: relative;
-            top: -36em;
+            top: -42.5em;
             background-color: transparent;
             --c: #F3CE5E;
             color: var(--c);
@@ -150,12 +150,16 @@
         <h1 class="titulo">Fisgon Parking Monitoring</h1>
         <div class="espacio_contenedor">
             <h4 id="dist1" class="display">Parqueadero 1: <span id="valor_distancia1" class="display">---</span> Cm</h4>
-            <output class="rango" id="rango_valP1">40</output><br>
-            <input id= "rangoP1" type="range" value="40" min="2" max="450" oninput="rango_valP1.value=value">
+            <p id="estado_dist1">...</p>
+
+            <output class="rango" id="rango_valP1">200</output><br>
+            <input id= "rangoP1" type="range" value="200" min="2" max="450" oninput="rango_valP1.value=value">
 
             <h4 id="dist2" class="display">Parqueadero 2: <span id="valor_distancia2" class="display">---</span> Cm</h4>
-            <output class="rango" id="rango_valP2">40</output><br>
-            <input id="rangoP2" type="range" value="40" min="2" max="450" oninput="rango_valP2.value=value">
+            <p id="estado_dist2">...</p>
+
+            <output class="rango" id="rango_valP2">200</output><br>
+            <input id="rangoP2" type="range" value="200" min="2" max="450" oninput="rango_valP2.value=value">
 
             <div>
                 <button class="btn" onclick="Pagina2()">
@@ -196,6 +200,18 @@
                         if(xhr.status === 200) {
                             console.log("Respuesta del servidor para distancia 1:", xhr.responseText);
                             dist1.innerText = xhr.responseText;
+                            const distancia = parseInt(xhr.responseText);
+                            const estadoDist1 = document.getElementById('estado_dist1');
+                            if(distancia <= 200){
+                                if (distancia >= 2){
+                                    estadoDist1.innerText = "Ocupado";
+                                }                                
+                            }else if(distancia > 200){
+                                estadoDist1.innerText = "Disponible";
+                            }else{
+                                estadoDist1.innerText = "...";
+                            }
+
                             resolve();
                         }else{
                             reject("Error al obtener distancia 1:", xhr.statusText);
@@ -224,6 +240,18 @@
                         if(xhr.status === 200) {
                             console.log("Respuesta del servidor para distancia 2:", xhr.responseText);
                             dist2.innerText = xhr.responseText;
+                            const distancia = parseInt(xhr.responseText);
+                            const estadoDist2 = document.getElementById('estado_dist2');
+                            if(distancia <= 200){
+                                if (distancia >= 2){
+                                    estadoDist2.innerText = "Ocupado";
+                                }                                
+                            }else if(distancia > 200){
+                                estadoDist2.innerText = "Disponible";
+                            }else{
+                                estadoDist2.innerText = "...";
+                            }
+
                             resolve();
                         }else{
                             reject("Error al obtener distancia 2:", xhr.statusText);
