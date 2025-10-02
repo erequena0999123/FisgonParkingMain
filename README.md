@@ -200,6 +200,6 @@ Este proyecto de tesis fue desarrollado como requisito para la obtención del t�
 ## 8. Licencia  
 
 Este proyecto se encuentra bajo la licencia **MIT**.  
-Consulta el archivo [`LICENSE`](./LICENSE) para más detalles.  
+Consulta el archivo [`LICENSE`](LICENSE.md) para más detalles.  
 
 
