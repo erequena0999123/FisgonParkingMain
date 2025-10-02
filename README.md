@@ -156,3 +156,12 @@ Para replicar el sistema, necesitarás el **IDE de Arduino** y configurar correc
 ```bash
 ngrok http [DIRECCION_LOCAL_DEL_ESP_SERVIDOR]
 ```
+
+<div align= "center">
+   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Tuner%20ngrok.png/ width= 600>
+</div>
+
+
+
+
+
