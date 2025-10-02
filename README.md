@@ -171,7 +171,7 @@ Este proyecto de tesis fue desarrollado como requisito para la obtención del t�
 
 - 👨‍🎓 **Autor:** Emmanuel Alejandro Requena Tonony
 - 🏫 **Institución:** Instituto Superior Tecnológico Sudamericano  
-- 📧 **Contacto:** [Tu Correo Electrónico]  
+- 📧 **Contacto:** [Perfil en Github](https://github.com/erequena0999123)
 
 ---
 
