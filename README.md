@@ -1,5 +1,27 @@
 # 🅿️ FisgonParkingMain: Monitoreo IoT de Parqueaderos  
 
+## 📑 Índice  
+
+1. [Introducción y Resumen del Proyecto](#1-introducción-y-resumen-del-proyecto)  
+2. [Arquitectura del Sistema (IoT Distribuido)](#2-arquitectura-del-sistema-iot-distribuido)  
+   - [Componentes Principales](#21-componentes-principales)  
+   - [Flujo Lógico de Funcionamiento](#22-flujo-lógico-de-funcionamiento)  
+3. [Tecnologías y Lenguajes Implementados](#3-tecnologías-y-lenguajes-implementados)  
+4. [Estructura del Repositorio](#4-estructura-del-repositorio)  
+5. [Visualización del Proyecto](#5-visualización-del-proyecto)  
+   - [Diagrama de Funcionamiento Lógico (Flujo)](#51-diagrama-de-funcionamiento-lógico-diagrama-de-flujo)  
+   - [Esquema Eléctrico](#52-esquema-eléctrico)  
+   - [Captura de Pantalla del Portal Web](#53-captura-de-pantalla-del-portal-web)  
+6. [Instalación y Puesta en Marcha](#6-instalación-y-puesta-en-marcha)  
+   - [Requisitos de Software y Hardware](#61-requisitos-de-software-y-hardware)  
+   - [Configuración de Red](#62-configuración-de-red)  
+   - [Despliegue del Portal Web (Túnel Ngrok)](#63-despliegue-del-portal-web-túnel-ngrok)  
+7. [Autoría y Contacto](#7-autoría-y-contacto)  
+8. [Licencia](#8-licencia)  
+
+
+---
+
 ## 1. Introducción y Resumen del Proyecto  
 Este repositorio contiene la implementación completa del proyecto de tesis:  
 
@@ -177,7 +199,7 @@ Este proyecto de tesis fue desarrollado como requisito para la obtención del t�
 
 ## 8. Licencia  
 
-Este proyecto se encuentra bajo la licencia **[Selecciona una licencia, e.g., MIT]**.  
+Este proyecto se encuentra bajo la licencia **MIT**.  
 Consulta el archivo [`LICENSE`](./LICENSE) para más detalles.  
 
 
