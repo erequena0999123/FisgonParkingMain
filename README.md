@@ -129,7 +129,10 @@ Para replicar el sistema, necesitarás el **IDE de Arduino** y configurar correc
 - **Hardware:**  
   - Módulos ESP (Cliente y Servidor)  
   - Sensores Ultrasónicos (ejemplo: **HC-SR04**)  
-  - Fuente de alimentación estable  
+  - Fuente de alimentación estable
+
+- **Extra:**  
+  - [Consultar el manual de uso](https://github.com/erequena0999123/FisgonParkingMain/blob/main/Manual%20de%20Uso.docx)
 
 ---
 
