@@ -1,8 +1,5 @@
 # 🅿️ FisgonParkingMain: Monitoreo IoT de Parqueaderos  
 
-
-
-
 ---
 
 ## 1. Introducción y Resumen del Proyecto  
