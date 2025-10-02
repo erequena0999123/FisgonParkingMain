@@ -95,12 +95,15 @@ Esta sección contiene los **diagramas clave** para entender el montaje físico 
 <div align="center">
    <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Diagrama%20de%20flujo%202.png/>
 </div>
+
 ---
 
 ### 5.2 Esquema Eléctrico  
 📌 **Descripción:** Detalle de las conexiones físicas entre el **microcontrolador ESP** y el **sensor ultrasónico** para la captura de datos de distancia.  
 
-![Esquema Eléctrico](./docs_esquemas/esquema_electrico/esquema.png)  
+<div align="center">
+   <img src= https://github.com/erequena0999123/FisgonParkingMain/blob/main/Esquema%20electrico/Esquema%20electrico%20del%20modulo.png/ width= 600>
+</div>
 
 ---
 
