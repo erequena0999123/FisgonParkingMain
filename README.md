@@ -43,10 +43,6 @@ El sistema opera bajo una **arquitectura de Internet de las Cosas (IoT)** con un
 4. **Visualización Remota:**  
    El servidor genera y aloja una **página web** que usa **JavaScript** para indexar y actualizar el estado de las plazas en intervalos definidos, ofreciendo la vista en **tiempo real** a través del túnel **Ngrok**.  
 
-<div align="center">
-   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Diagrama%20de%20flujo%202.png/>
-</div>
-
 ---
 
 ## 3. Tecnologías y Lenguajes Implementados  
@@ -88,3 +84,67 @@ FisgonParkingMain/
 
 ```
 ---
+
+## 5. Visualización del Proyecto  
+
+Esta sección contiene los **diagramas clave** para entender el montaje físico y la lógica del sistema.  
+
+### 5.1 Diagrama de Funcionamiento Lógico (Diagrama de Flujo)  
+📌 **Descripción:** Diagrama de flujo que ilustra el proceso continuo de adquisición de datos (**Cliente**), transmisión **UDP**, recepción y clasificación (**Servidor**), y la actualización de la interfaz web.  
+
+<div align="center">
+   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Diagrama%20de%20flujo%202.png/>
+</div>
+---
+
+### 5.2 Esquema Eléctrico  
+📌 **Descripción:** Detalle de las conexiones físicas entre el **microcontrolador ESP** y el **sensor ultrasónico** para la captura de datos de distancia.  
+
+![Esquema Eléctrico](./docs_esquemas/esquema_electrico/esquema.png)  
+
+---
+
+### 5.3 Captura de Pantalla del Portal Web  
+📌 **Descripción:** Interfaz de usuario que visualiza el **estado actual de los parqueaderos**, destacando visualmente las plazas disponibles.  
+
+![Portal Web](./docs_esquemas/imagenes/portal_web.png)  
+
+---
+
+## 6. Instalación y Puesta en Marcha  
+
+Para replicar el sistema, necesitarás el **IDE de Arduino** y configurar correctamente las **redes**.  
+
+### 6.1 Requisitos de Software y Hardware  
+
+- **Software:**  
+  - IDE de Arduino con soporte para placas **ESP8266/ESP32**  
+  - Bibliotecas necesarias: **WiFi.h**, **WiFiUdp.h**  
+
+- **Hardware:**  
+  - Módulos ESP (Cliente y Servidor)  
+  - Sensores Ultrasónicos (ejemplo: **HC-SR04**)  
+  - Fuente de alimentación estable  
+
+---
+
+### 6.2 Configuración de Red  
+
+1. Abre el código en las carpetas:  
+   - `esp_cliente/`  
+   - `esp_servidor/`  
+
+2. Define las credenciales de la red **Wi-Fi** (`SSID` y `PASSWORD`) en ambos módulos.  
+
+3. Configura las **direcciones IP** (estáticas o dentro de la red local) para la comunicación vía **UDP**.  
+
+---
+
+### 6.3 Despliegue del Portal Web (Túnel Ngrok)  
+
+1. Una vez que el **ESP Servidor** esté ejecutándose y levante el servidor **HTTP local**.  
+2. Abre una terminal y ejecuta Ngrok:  
+
+```bash
+ngrok http [DIRECCION_LOCAL_DEL_ESP_SERVIDOR]
+```
