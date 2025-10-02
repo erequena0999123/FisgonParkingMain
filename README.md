@@ -110,7 +110,9 @@ Esta sección contiene los **diagramas clave** para entender el montaje físico 
 ### 5.3 Captura de Pantalla del Portal Web  
 📌 **Descripción:** Interfaz de usuario que visualiza el **estado actual de los parqueaderos**, destacando visualmente las plazas disponibles.  
 
-![Portal Web](./docs_esquemas/imagenes/portal_web.png)  
+<div align = "center">
+   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Funcionamiento%20de%20la%20pagina%20en%20tiempo%20real.png/ width = 900>
+</div>
 
 ---
 
