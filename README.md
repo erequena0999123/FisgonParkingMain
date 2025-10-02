@@ -71,5 +71,20 @@ El proyecto combina **programación embebida de bajo nivel** con **desarrollo we
 
 El código está organizado siguiendo la **separación de roles** de los módulos **ESP Cliente** y **ESP Servidor**, además de incluir toda la **documentación gráfica** y **archivos de apoyo** necesarios para la implementación y pruebas.  
 
+```bash
+FisgonParkingMain/
+├── esp_cliente/             # Código fuente para los módulos de adquisición de datos (Esclavos)
+│   ├── subarchivo_sensores/ # Separación de las acciones de captura y formateo
+│   └── ...
+├── esp_servidor/            # Código fuente del módulo central (Maestro)
+│   ├── paginas_web/         # Archivos .html y .css del portal web (Archivos de apoyo)
+│   ├── subarchivo_udp/      # Módulo de recepción y clasificación de paquetes UDP
+│   └── ...
+├── docs_esquemas/           # Documentación visual del proyecto
+│   ├── imagenes/            # Diagramas, capturas y fotografías del prototipo
+│   ├── esquema_electrico/   # Archivos del diseño del circuito
+│   └── esquema_logico/      # Diagramas de flujo y UML de la lógica del sistema
+└── README.md
 
-
+```
+---
