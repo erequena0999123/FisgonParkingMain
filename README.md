@@ -161,7 +161,23 @@ ngrok http [DIRECCION_LOCAL_DEL_ESP_SERVIDOR]
    <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Tuner%20ngrok.png/ width= 600>
 </div>
 
+3. Accede a la URL pública proporcionada por Ngrok para ver el estado del parqueadero desde cualquier lugar con conexión a Internet.
 
+---
 
+## 7. Autoría y Contacto  
+
+Este proyecto de tesis fue desarrollado como requisito para la obtención del título de **3er Nivel** en **Desarrollo de Software**.  
+
+- 👨‍🎓 **Autor:** Emmanuel Alejandro Requena Tonony
+- 🏫 **Institución:** Instituto Superior Tecnológico Sudamericano  
+- 📧 **Contacto:** [Tu Correo Electrónico]  
+
+---
+
+## 8. Licencia  
+
+Este proyecto se encuentra bajo la licencia **[Selecciona una licencia, e.g., MIT]**.  
+Consulta el archivo [`LICENSE`](./LICENSE) para más detalles.  
 
 
