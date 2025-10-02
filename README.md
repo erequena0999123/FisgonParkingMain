@@ -27,7 +27,9 @@ El sistema opera bajo una **arquitectura de Internet de las Cosas (IoT)** con un
 
 ### 2.2 Flujo Lógico de Funcionamiento  
 
-![Diagrama de flujo 1](./imagenes del proyecto)
+<div align="center">
+   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Diagrama%20de%20flujo%201.png/>
+</div>
 
 1. **Captura de Datos:**  
    Los **ESP Clientes** miden constantemente la distancia de las plazas con sensores ultrasónicos.  
@@ -40,6 +42,7 @@ El sistema opera bajo una **arquitectura de Internet de las Cosas (IoT)** con un
 
 4. **Visualización Remota:**  
    El servidor genera y aloja una **página web** que usa **JavaScript** para indexar y actualizar el estado de las plazas en intervalos definidos, ofreciendo la vista en **tiempo real** a través del túnel **Ngrok**.  
+
 
 ---
 
