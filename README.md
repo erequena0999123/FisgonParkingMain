@@ -43,6 +43,9 @@ El sistema opera bajo una **arquitectura de Internet de las Cosas (IoT)** con un
 4. **Visualización Remota:**  
    El servidor genera y aloja una **página web** que usa **JavaScript** para indexar y actualizar el estado de las plazas en intervalos definidos, ofreciendo la vista en **tiempo real** a través del túnel **Ngrok**.  
 
+<div align="center">
+   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Diagrama%20de%20flujo%202.png/>
+</div>
 
 ---
 
