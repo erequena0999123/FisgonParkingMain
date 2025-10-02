@@ -61,6 +61,10 @@ El proyecto combina **programación embebida de bajo nivel** con **desarrollo we
 | **IDE Principal**         | Visual Studio Code          | Entorno de desarrollo para código y archivos web |
 | **Networking / Túnel**    | Ngrok                       | Creación de un túnel público para acceder al portal web local del ESP Servidor desde Internet |
 
+<div align ="center">
+   <img src=https://github.com/erequena0999123/FisgonParkingMain/blob/main/Imagenes%20del%20proyecto/Diagrama%20estructural.png/ width=600>
+</div>
+
 ---
 
 ## 4. Estructura del Repositorio  
